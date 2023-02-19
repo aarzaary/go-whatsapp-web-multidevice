@@ -123,7 +123,7 @@ func InitWaCLI(storeContainer *sqlstore.Container) *whatsmeow.Client {
 		panic(err)
 	}
 
-	osName := fmt.Sprintf("%s %s", config.AppOs, config.AppVersion)
+	osName := fmt.Sprintf("%s", config.AppOs)
 	store.DeviceProps.PlatformType = &config.AppPlatform
 	store.DeviceProps.Os = &osName
 	cli = whatsmeow.NewClient(device, waLog.Stdout("Client", config.WhatsappLogLevel, true))
