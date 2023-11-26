@@ -10,7 +10,7 @@ on:
 
 jobs:
   release-macos:
-    if: startsWith(github.ref, 'refs/tags/v')
+    # if: startsWith(github.ref, 'refs/tags/v')
     runs-on: macos-latest
     environment: production
     steps:
